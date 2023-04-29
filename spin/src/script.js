@@ -2,6 +2,7 @@ const spinner = document.querySelector(".spinner");
 const startBtn = document.querySelector(".spinner__start-button");
 const input = document.querySelector(".spinner__input");
 let plate = document.querySelector(".spinner__plate");
+let popup = document.getElementById("popup");
 let items = [...document.getElementsByClassName("spinner__item")];
 
 input.addEventListener("change", (e) => {
