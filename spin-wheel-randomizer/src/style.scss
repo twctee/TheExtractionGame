@@ -1,0 +1,211 @@
+$font: 'Dosis', sans-serif;
+
+$white: #f5f5f5;
+$light-gray: #EBEBEB;
+$main: #7FC2C2;
+$light-main: #8CD0D0;
+$dark-main: #459A9A;
+
+$size: 400px;
+$half-size: 200px;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #c7e6e6;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.spinner {
+  position: relative;
+  height: $size;
+  width: $size;
+  min-height: $size;
+  min-width: $size;
+  border-radius: 50%;
+  box-shadow: 0px 0px 160px rgba(17, 17, 17, 0.25);
+  overflow: hidden;
+  
+  &__body {
+    position: absolute;
+    border-top: $half-size solid transparent;
+    border-right: $half-size solid $main;
+    border-bottom: $half-size solid $main;
+    border-left: $half-size solid $main;
+    
+    z-index: 200;
+  }
+  
+  &__start-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    font-family: $font;
+    font-weight: bold;
+    font-size: 64px;
+    color: $white;
+    background-color: $main;
+    outline: none;
+    border: none;
+    user-select: none;
+    
+    z-index: 300;
+    
+    transition: 
+      height .1s ease-in,
+      width .2s ease-in,
+      color .1s ease-in,
+      background-color .1s ease-in;
+    
+    &:hover {
+      height: 150px;
+      width: 150px;
+      background-color: $light-main;
+      box-shadow: 0px 0px 44px rgba(17, 17, 17, 0.25);
+    }
+    
+    &:active {
+      height: 135px;
+      width: 135px;
+      color: $main;
+      background-color: $dark-main;
+      box-shadow: none;
+      
+      animation: shaking .15s ease-in-out infinite;
+    }
+  }
+  
+  &__input {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    padding: 2px 10px;
+    transform: translatex(-50%);
+    font-family: $font;
+    font-size: 48px;
+    font-weight: bold;
+    color: $main;
+    background: $white;
+    border-radius: 36px;
+
+    text-align: center;
+    outline: none;
+    border: none;
+    
+    z-index: 300;
+
+    transition: .1s ease-in;
+
+    &:hover {
+      color: $light-main;
+    }
+
+    &:focus {
+      color: $dark-main;
+    }
+  }
+  
+  &__plate {
+    position: absolute;
+    height: $size;
+    width: $size;
+    
+    // transition: 2s ease-out;
+  }
+  
+  &__plate--spin{
+    animation: spinning 2s ease-out;
+  }
+  
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    height: calc(#{$half-size} - 40px);
+    padding-top: 40px;
+    font-family: $font;
+    font-weight: bold;
+    font-size: 48px;
+    color: $dark-main;
+    text-align: center;
+  
+    transform-origin: 50% 100%;
+    
+    z-index: 10;
+  
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translatex(-50%);
+      border-top: $half-size solid $white;
+      border-right: $half-size solid transparent;
+      border-bottom: $half-size solid transparent;
+      border-left: $half-size solid transparent;
+      
+      z-index: -1;
+    }  
+  
+    &:nth-child(even):before {
+      border-top: $half-size solid $light-gray;
+    }
+  }
+  
+  &__item--left {
+    transform: translatex(-50%) rotate(-90deg);
+  }
+
+  &__item--top {
+      transform: translatex(-50%) rotate(0deg);
+  }
+
+  &__item--right {
+      transform: translatex(-50%) rotate(90deg);
+  }
+
+  &__item--bottom {
+      transform: translatex(-50%) rotate(180deg);
+  }
+}
+
+@keyframes shaking {
+  0% { 
+    top: calc(50% + 1px); 
+    left: calc(50% - 1px); 
+  }
+  25% { 
+    top: calc(50% - 1px); 
+    left: calc(50% + 1px); 
+  }
+  50% { 
+    top: calc(50% + 1px); 
+    left: calc(50% + 1px);
+  }
+  75% { 
+    top: calc(50% - 1px); 
+    left: calc(50% - 1px); 
+  }
+}
+
+@keyframes spinning {
+  from { 
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1800deg);
+  }
+}
