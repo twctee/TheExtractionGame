@@ -9,6 +9,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: #9ba4b5;
+
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -21,18 +22,16 @@ input[type="number"]::-webkit-outer-spin-button {
     position: relative;
     height: 25rem;
     width: 25rem;
-    min-height: 25rem;
-    min-width: 25rem;
     border-radius: 50%;
     box-shadow: 0px 0px 44px rgba(17, 17, 17, 0.25);
     overflow: hidden;
 }
 .spinner__body {
     position: absolute;
-    border-top: 200px solid transparent;
-    border-right: 200px solid #212a3e;
-    border-bottom: 200px solid #212a3e;
-    border-left: 200px solid #212a3e;
+    border-top: 12.5rem solid transparent;
+    border-right: 12.5rem solid #212a3e;
+    border-bottom: 12.5rem solid #212a3e;
+    border-left: 12.5rem solid #212a3e;
     z-index: 200;
 }
 .spinner__start-button {
@@ -59,14 +58,14 @@ input[type="number"]::-webkit-outer-spin-button {
         background-color 0.1s ease-in;
 }
 .spinner__start-button:hover {
-    height: 150px;
-    width: 150px;
+    height: 9.375rem;
+    width: 9.375rem;
     background-color: #e49393;
     box-shadow: 0px 0px 44px rgba(17, 17, 17, 0.25);
 }
 .spinner__start-button:active {
-    height: 135px;
-    width: 135px;
+    height: 8.438rem;
+    width: 8.438rem;
     color: #9ba4b5;
     background-color: #394867;
     box-shadow: none;
@@ -100,8 +99,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .spinner__plate {
     position: absolute;
-    height: 400px;
-    width: 400px;
+    height: 25rem;
+    width: 25rem;
 }
 .spinner__plate--spin {
     -webkit-animation: spinning 2s ease-out;
@@ -112,7 +111,7 @@ input[type="number"]::-webkit-outer-spin-button {
     top: 0;
     left: 50%;
     transform: translatex(-50%);
-    height: calc(200px - 40px);
+    height: calc(12.5rem - 2.5rem);
     padding-top: 40px;
     font-family: "Dosis", sans-serif;
     font-weight: bold;
@@ -128,14 +127,14 @@ input[type="number"]::-webkit-outer-spin-button {
     top: 0;
     left: 50%;
     transform: translatex(-50%);
-    border-top: 200px solid #f5f5f5;
-    border-right: 200px solid transparent;
-    border-bottom: 200px solid transparent;
-    border-left: 200px solid transparent;
+    border-top: 12.5rem solid #f5f5f5;
+    border-right: 12.5rem solid transparent;
+    border-bottom: 12.5rem solid transparent;
+    border-left: 12.5rem solid transparent;
     z-index: -1;
 }
 .spinner__item:nth-child(even):before {
-    border-top: 200px solid #ebebeb;
+    border-top: 12.5rem solid #ebebeb;
 }
 .spinner__item--left {
     transform: translatex(-50%) rotate(-90deg);
@@ -152,39 +151,39 @@ input[type="number"]::-webkit-outer-spin-button {
 
 @-webkit-keyframes shaking {
     0% {
-        top: calc(50% + 1px);
-        left: calc(50% - 1px);
+        top: calc(50% + 0.063rem);
+        left: calc(50% - 0.063rem);
     }
     25% {
-        top: calc(50% - 1px);
-        left: calc(50% + 1px);
+        top: calc(50% - 0.063rem);
+        left: calc(50% + 0.063rem);
     }
     50% {
-        top: calc(50% + 1px);
-        left: calc(50% + 1px);
+        top: calc(50% + 0.063rem);
+        left: calc(50% + 0.063rem);
     }
     75% {
-        top: calc(50% - 1px);
-        left: calc(50% - 1px);
+        top: calc(50% - 0.063rem);
+        left: calc(50% - 0.063rem);
     }
 }
 
 @keyframes shaking {
     0% {
-        top: calc(50% + 1px);
-        left: calc(50% - 1px);
+        top: calc(50% + 0.063rem);
+        left: calc(50% - 0.063rem);
     }
     25% {
-        top: calc(50% - 1px);
-        left: calc(50% + 1px);
+        top: calc(50% - 0.063rem);
+        left: calc(50% + 0.063rem);
     }
     50% {
-        top: calc(50% + 1px);
-        left: calc(50% + 1px);
+        top: calc(50% + 0.063rem);
+        left: calc(50% + 0.063rem);
     }
     75% {
-        top: calc(50% - 1px);
-        left: calc(50% - 1px);
+        top: calc(50% - 0.063rem);
+        left: calc(50% - 0.063rem);
     }
 }
 @-webkit-keyframes spinning {
@@ -213,7 +212,7 @@ input[type="number"]::-webkit-outer-spin-button {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
-    padding: 0 1.875rem 3.125rem;
+    padding: 0 2rem 5rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
@@ -227,31 +226,31 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .popup img {
-    width: 150px;
-    margin-top: -60px;
+    width: 12.5rem;
+    margin-top: -70px;
 }
 
 .popup h2 {
-    font-size: 56px;
+    font-size: 62px;
     font-weight: bold;
-    margin: 20px 0 20px;
+    margin: 1.25rem 0 1.25rem;
 }
 
 .popup h3 {
-    font-size: 42px;
+    font-size: 52px;
     font-weight: bold;
-    margin: 20px 0 20px;
+    margin: 1.25rem 0 1.25rem;
 }
 
 .popup button {
     color: #f5f5f5;
     font-family: "Dosis", sans-serif;
-    font-size: 16px;
-    margin-top: 50px;
+    font-size: 32px;
+    margin-top: 3.125rem;
     background-color: #394867;
     border-radius: 5%;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    padding: 10px 20px;
+    padding: 1.5rem 2rem;
     outline: none;
     border: 0;
     cursor: pointer;
