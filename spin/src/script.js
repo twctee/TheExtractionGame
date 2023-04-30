@@ -5,7 +5,7 @@ let plate = document.querySelector(".spinner__plate");
 let popup = document.getElementById("popup");
 let items = [...document.getElementsByClassName("spinner__item")];
 let result = "";
-document.querySelector("p").innerHTML = result;
+document.querySelector("h3").innerHTML = result;
 
 input.addEventListener("change", (e) => {
     if (input.value === "" || +input.value < 1) {
@@ -26,15 +26,17 @@ startBtn.addEventListener("click", function () {
     plate = newPlate;
     items = [...document.getElementsByClassName("spinner__item")];
     reward = items[0].outerText;
-    if (reward <= 4){
+    if (reward <= 4) {
+        document.getElementById("reward").innerHTML = `<h3>น้ำดื่ม 1 ขวด</h3>`;
+    } else if (reward <= 6) {
         // document.querySelector("p").innerHTML = reward;
-        document.getElementById("reward").innerHTML = `<p>ส่วนลด 5%</p>`
-    } else if (reward <=6){
-        document.getElementById("reward").innerHTML = `<p>ส่วนลด 10%</p>`
-    } else if (reward <= 8){
-        document.getElementById("reward").innerHTML = `<p>น้ำเมนูกาแฟ</p>`
-    } else if (reward == 10){
-        document.getElementById("reward").innerHTML = `<p>แก้วน้ำของร้าน</p>`
+        document.getElementById("reward").innerHTML = `<h3>ส่วนลด 5 บาท</h3>`;
+    } else if (reward <= 7) {
+        document.getElementById("reward").innerHTML = `<h3>ส่วนลด 10 บาท</h3>`;
+    } else if (reward <= 9) {
+        document.getElementById("reward").innerHTML = `<h3>ฟรี 1 แก้ว</h3>`;
+    } else if (reward == 10) {
+        document.getElementById("reward").innerHTML = `<h3>แก้วน้ำของร้าน</h3>`;
     }
 
     // debugger;

@@ -12,29 +12,36 @@
 </head>
 
 <body>
+    <div class="container-fluid">
+            <img src="/spin/img/LOGOใหม่-FINISH.png" alt="" class="logo">
+        <div class="spinner" id="hidespin">
+            <div class="spinner__body"></div>
+            <button class="spinner__start-button">GO!</button>
+            <div class="signboard">
+                <p>Extraction wheel</p>
+            </div>
+            <input type="number" min="0" , max="999" class="spinner__input" value="10" />
+            <div class="spinner__plate">
+                <div class="spinner__item spinner__item--top">1</div>
+                <div class="spinner__item spinner__item--right">2</div>
+                <div class="spinner__item spinner__item--bottom">3</div>
+                <div class="spinner__item spinner__item--left">4</div>
+            </div>
+        </div>
+        <!-- partial -->
+    
+        <div class="popup" id="popup">
+            <img src="/spin/img/star.png" alt="" />
+            <h2>ยินดีด้วยคุณได้รางวัล!!</h2>
+            <div id="reward">
+                <h3></h3>
+                <img src="" alt="">
+            </div>
+            <button type="button" onclick="closePopup()">OK</button>
+        </div>
+    </div>
     <!-- partial:index.partial.html -->
-    <div class="spinner" id="hidespin">
-        <div class="spinner__body"></div>
-        <button class="spinner__start-button">GO!</button>
-        <input type="number" min="0" , max="999" class="spinner__input" value="10" />
-        <div class="spinner__plate">
-            <div class="spinner__item spinner__item--top">1</div>
-            <div class="spinner__item spinner__item--right">2</div>
-            <div class="spinner__item spinner__item--bottom">3</div>
-            <div class="spinner__item spinner__item--left">4</div>
-        </div>
-    </div>
-    <!-- partial -->
-
-    <div class="popup" id="popup">
-        <img src="/spin/img/star.png" alt="" />
-        <h2>ยินดีด้วยคุณได้รางวัล!!</h2>
-        <div id="reward">
-            <p></p>
-            <img src="" alt="">
-        </div>
-        <button type="button" onclick="closePopup()">OK</button>
-    </div>
+    
     <script src="./script.js"></script>
 </body>
 
