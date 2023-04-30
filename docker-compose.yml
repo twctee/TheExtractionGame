@@ -1,0 +1,10 @@
+version: '2.0'
+services: 
+    web:
+        image: nginx:1.13.0-alpine
+        container_name: extraction-nginx
+        restart: always
+        ports: 
+        - "1010:80"
+        volumes: 
+        - ./spin/src:/usr/share/nginx/html
