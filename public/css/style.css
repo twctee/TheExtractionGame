@@ -277,9 +277,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .signboard p {
     position: absolute;
-    bottom: 3.125rem;
+    bottom: 5%;
     left: 50%;
-    margin-bottom: 5rem;
     transform: translatex(-50%);
     font-family: "Dosis", sans-serif;
     font-size: 56px;
