@@ -1,7 +1,7 @@
-version: '2.0'
+version: '3.0'
 services: 
     web:
-        image: nginx:1.13.0-alpine
+        image: nginx:1.23.4-alpine
         container_name: extraction-nginx
         restart: always
         ports: 
