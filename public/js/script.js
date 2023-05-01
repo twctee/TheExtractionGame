@@ -34,9 +34,9 @@ startBtn.addEventListener("click", function () {
     } else if (reward <= 7) {
         document.getElementById("reward").innerHTML = `<h3>ส่วนลด 10 บาท</h3>`;
     } else if (reward <= 9) {
-        document.getElementById("reward").innerHTML = `<h3>ฟรี 1 แก้ว</h3>`;
+        document.getElementById("reward").innerHTML = `<h3>เครื่องดื่มฟรี 1 แก้ว</h3>`;
     } else if (reward == 10) {
-        document.getElementById("reward").innerHTML = `<h3>แก้วน้ำของร้าน</h3>`;
+        document.getElementById("reward").innerHTML = `<h3>แก้วน้ำ The Extraction</h3>`;
     }
 
     // debugger;
